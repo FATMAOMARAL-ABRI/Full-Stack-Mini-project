@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --calo-bg: #FFFBE6;        /* Light Cream */
+  --calo-card: #F3E5D0;      /* Light Tan Card */
+  --calo-input: #E6C097;     /* Muted Tan Input */
+  --calo-btn: #BDB09D;       /* Greyish Tan Button */
+  --calo-text: #4A2B4D;      /* Deep Purple Text */
+  --calo-logo: #C88D53;      /* Golden Brown Logo */
+}
+
+/* 1. Global Reset to prevent white borders */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--calo-bg);
+  color: var(--calo-text);
+  overflow-x: hidden;
+}
+
+/* 2. Optimized CALO Card */
+.calo-card {
+  background-color: var(--calo-card);
+  border-radius: 40px; /* Deeply rounded corners */
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  padding: 3rem !important; /* Spacious internal padding */
+}
+
+/* 3. The "Pill" Inputs */
+.form-control.calo-input {
+  border-radius: 25px !important; /* Pill shape */
+  border: none !important;
+  background-color: var(--calo-input) !important;
+  padding: 14px 25px !important; /* Taller and wider padding */
+  color: var(--calo-text) !important;
+  font-size: 0.95rem;
+  box-shadow: none !important;
+}
+
+.form-control.calo-input::placeholder {
+  color: #9e8469;
+}
+
+/* 4. Matching Labels */
+.form-label {
+  font-weight: 700;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+/* 5. Custom Buttons */
+.btn.calo-btn {
+  background-color: var(--calo-btn) !important;
+  color: #FFFBE6 !important; /* White/Cream text on button */
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 10px 40px !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn.calo-btn:hover {
+  opacity: 0.9;
+}
+
+/* 6. Logo & Links */
+.calo-logo-text {
+  color: var(--calo-logo);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.calo-link {
+  color: var(--calo-text);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.bg-purple {
+  background-color: #7b5cff !important;
+  color: #ffffff !important;
+}
+
+/* Print-only receipt styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .receipt-print-area,
+  .receipt-print-area * {
+    visibility: visible;
+  }
+
+  .receipt-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
