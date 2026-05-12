@@ -115,6 +115,7 @@ const ProductRegister = () => {
             type="number"
             name="product_id"
             className="form-control"
+            placeholder="e.g., 101"
             value={formData.product_id}
             onChange={handleChange}
             required
@@ -128,6 +129,7 @@ const ProductRegister = () => {
             type="text"
             name="name"
             className="form-control"
+            placeholder="Product name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -142,6 +144,7 @@ const ProductRegister = () => {
             name="price"
             step="0.01"
             className="form-control"
+            placeholder="0.00"
             value={formData.price}
             onChange={handleChange}
             required
@@ -155,6 +158,7 @@ const ProductRegister = () => {
             type="number"
             name="stock"
             className="form-control"
+            placeholder="0"
             value={formData.stock}
             onChange={handleChange}
             required
@@ -175,6 +179,7 @@ const ProductRegister = () => {
             name="picture"
             accept="image/*"
             className="form-control"
+            placeholder="Choose an image file"
             onChange={handleFileChange}
           />
           <div className="mt-2">

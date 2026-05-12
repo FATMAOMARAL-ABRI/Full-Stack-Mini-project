@@ -12,7 +12,7 @@ export const fetchCart = createAsyncThunk(
   async (userId, { rejectWithValue }) => {
     try {
       const res = await axios.get(
-        `http://localhost:3001/api/cart/getCart/${userId}`
+        `${import.meta.env.VITE_SERVER_URL}/api/cart/getCart/${userId}`
       );
       return res.data; // array of cart items from DB
     } catch (error) {
